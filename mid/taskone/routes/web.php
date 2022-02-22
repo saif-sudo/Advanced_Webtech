@@ -14,8 +14,12 @@ use App\Http\Controllers\homecontroller;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::get('/',[homecontroller::class,'show'])->name('home');
+Route::get('/contact',[homecontroller::class,'contact'])->name('contacts');
+Route::get('/login',[homecontroller::class,'login'])->name('login');
+Route::get('/admin',[homecontroller::class,'admin'])->name('admin');
+Route::get('/student',[homecontroller::class,'student'])->name('student');

@@ -43,4 +43,54 @@ class homecontroller extends Controller
 
         return view('homepage')->with('course',$courses);
     }
+
+
+    
+    public function contact(){
+       
+        $contacts = array();
+        $contact = array(
+
+            "name" => "Saif",
+            "position" => "developer",
+            "mail" => "s@gmail.com",
+           
+        );
+        $contact =  (object)$contact;
+        $contacts[] = $contact;
+
+        $contact = array(
+
+            "name" => "Tarek",
+            "position" => "Engineer",
+            "mail" => "t@gmail.com",
+           
+        );
+        $contact =  (object)$contact;
+        $contacts[] = $contact;
+
+        $contact = array(
+            "name" => "Niloy",
+            "position" => "developer",
+            "mail" => "n@gmail.com",
+           
+          
+        );
+        $contact =  (object)$contact;
+        $contacts[] = $contact;
+
+        return view('contact')->with('contact',$contacts);
+    }
+
+    public function login(){
+        return view('login');
+    }
+
+    public function admin(){
+        return view('admin.admin');
+    }
+
+    public function student(){
+        return view('students.student');
+}
 }
